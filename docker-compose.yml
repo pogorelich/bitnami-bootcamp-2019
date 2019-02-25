@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+  etcd:
+    image: 'etcd:debian'
+    volumes:
+      - './configuration:/configuration'
+    environment:
+      - ETCDCTL_ROOT_PASSWORD=obama
+      - ETCD_CONFIGURATION_FILE=pistacho
+
+volumes:
+  configuration:
+    driver: local
