@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+  cliente:
+    image: 'bitnami/mariadb:latest'
+    volumes:
+      - '/tmp/sqldump/:/tmp/'
+    command: bash -c "mysqldump -h mariadb -uroot --databases bitnami_wordpress > /tmp/db_backup.sql"
+    networks:
+      ejercicio9_my_net:
+
+networks: 
+  ejercicio9_my_net:
+    external: true
