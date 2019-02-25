@@ -23,12 +23,5 @@ The etcd container can be customized by specifying environment variables on the 
 - `MEMBER_DIR`: etcd member directory. Default: **/default.etcd/member**
 - `DISABLE_AUTHENTICATION`: Set to **yes** if you don't want to enable authentication, which is **NOT recommended**.
 - `ETCD_CONFIGURATION_FILE`: Path to etcd configuration file. No configuration file by default.
-- `WORDPRESS_LAST_NAME`: WordPress user last name. Default: **LastName**
-- `WORDPRESS_BLOG_NAME`: WordPress blog name. Default: 
-**User's blog**
 
-ENV DATA_DIR="/default.etcd" \
-    MEMBER_DIR="/default.etcd/member" \
-    DISABLE_AUTHENTICATION="no" \
-    ETCDCTL_ROOT_PASSWORD="toor" \
-    ETCD_CONFIGURATION_FILE=""
+
